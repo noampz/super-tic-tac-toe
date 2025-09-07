@@ -59,7 +59,7 @@ MinimaxResult Solver::minimax(bool is_maximizing, bool first, int depth)
 {
     int score = evaluate();
     if (score != 0)
-        return {score, 0};
+        return {(float)score, 0};
     if (board.tie())
         return {0, 0};
 

@@ -6,7 +6,7 @@
 // {eval, best_move}
 struct MinimaxResult
 {
-    int eval;
+    float eval;
     int best_move;
 };
 
@@ -33,7 +33,7 @@ class Solver
 
     int evaluate();
     //decided not to continue with the fork as it will not be efficient
-    //int fork(Board &board, int xo);
+    int fork(int xo);
 
     MinimaxResult minimax(bool is_maximizing, bool first = true, int depth = 0);
 

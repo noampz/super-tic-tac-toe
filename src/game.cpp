@@ -26,7 +26,7 @@ bool Game::round(int xo)
     board.printBoard();
     std::cout << xo << "\n";
     int answer;
-    if (xo == 1)
+    if (xo == -1)
     {
         Solver solver = Solver(board, 1);
         answer = solver.solve();
