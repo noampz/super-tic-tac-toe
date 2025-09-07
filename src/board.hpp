@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 class Board
@@ -12,16 +13,25 @@ class Board
         [4,5,6]
         [7,8,9]  */
     int board[3][3];
-    
+    int how_many_turns;
+
     //returns 'x' if xo is 1 or 'o' if xo is -1
     //and ' ' if xo 
     char getXO(int xo);
+
     public:
     Board();
+    Board(const Board &board);
     // x == 1
     // o == -1
     // returns true if succeded false if not
-    bool setSquare(int num_of_squere , int xo);
+    bool setSquare(int num_of_square , int xo, bool brute_force = false);
+
+    //0 means no one won
+    // x == 1
+    // o == -1
+    int won();
+    bool tie();
 
     // x == 1
     // nothing == 0
@@ -34,6 +44,9 @@ class Board
     // 0 indexed
     // the second []
     int getColumnByNumOfSquare(int num_of_square) {return (num_of_square-1)%3;}
+
+    // more optimized winning checking
+    bool checkWinAtPosition(int num_of_square, int xo);
 
     void printBoard();
 };

@@ -1,10 +1,12 @@
-#include "game.hpp"
+#include "./src/game.hpp"
 
 int main()
 {
     Game game = Game();
-    while (!game.round())
+    int xo = 1;
+    while (!game.round(xo))
     {
+        xo *= -1;
         system("cls");
     }
 

@@ -1,3 +1,4 @@
+#pragma once
 #include "board.hpp"
 
 class Game
@@ -5,22 +6,21 @@ class Game
     private:
     Board board;
     // 1 = x , -1 = o
-    int whoseTurn;
+    int whose_turn;
     // 0 = tie, 1 = x won, -1 = o won
-    int whoWon;
+    int who_won;
 
-    int howManyTurns;
-
+    int last_turn;
     int getSquareNumFromUser();
-    bool checkWinAtPosition(int num_of_square, int xo);
+
+    friend class solver;
     public:
     Game();
-    int getWhoWon() const {return whoWon;}
+    int getWhoWon() const {return who_won;}
+
 
     //false if game ends
-    bool round();
-    bool won();
-    bool tie();
+    bool round(int xo);
 
     void printWinningMessage();
 };

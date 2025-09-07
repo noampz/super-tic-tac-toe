@@ -5,15 +5,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(HEADERS
-    board.hpp
-    game.hpp
+    ./src/board.hpp
+    ./src/game.hpp
+    ./src/data_structure/treeNode.hpp
+    ./src/solver.hpp
 )
 
 set(SOURCES
-    board.cpp
-    game.cpp
+    ./src/board.cpp
+    ./src/game.cpp
     app.cpp
-
+    ./src/solver.cpp
 )
 
 add_executable(tic_tac_toe ${SOURCES} ${HEADERS})
