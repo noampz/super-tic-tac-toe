@@ -35,7 +35,7 @@ class Solver
     //decided not to continue with the fork as it will not be efficient
     int fork(int xo);
 
-    MinimaxResult minimax(bool is_maximizing, bool first = true, int depth = 0);
+    MinimaxResult minimax(bool is_maximizing, int depth = 0);
 
     public:
     

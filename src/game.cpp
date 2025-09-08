@@ -24,17 +24,20 @@ int Game::getSquareNumFromUser()
 bool Game::round(int xo)
 {
     board.printBoard();
-    std::cout << xo << "\n";
+    
     int answer;
-    if (xo == -1)
+    if (xo == 1)
     {
         Solver solver = Solver(board, 1);
         answer = solver.solve();
     }
     else
+    {
         answer = getSquareNumFromUser();
-
-    std::cout << answer;
+        //Solver solverO = Solver(board, -1);
+        //answer = solverO.solve();
+    }
+        
     board.setSquare(answer, xo);
     
     if (board.checkWinAtPosition(answer, xo))
