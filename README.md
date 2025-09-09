@@ -1,8 +1,5 @@
-﻿# super-tic-tac-toe solver
+﻿# tic-tac-toe solver
 
-it suppose to win against you in super tic-tac-toe
-(currently it is a normal tic tac toe game but in the end it will play against you and win)
+it suppose to win against you in tic-tac-toe (or at least not lose)
 
-UPDATE:
-it is currently able to play against you (now it is perfect)
 
